@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './register.html',
   styleUrl: './register.css',
 })
-export class Register {}
+export default class Register { } // importante usar default para el lazy loading que se implemento en app.routes.ts

@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './checkout.html',
   styleUrl: './checkout.css',
 })
-export class Checkout {}
+export default class Checkout { } // importante usar default para el lazy loading que se implemento en app.routes.ts

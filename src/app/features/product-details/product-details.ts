@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './product-details.html',
   styleUrl: './product-details.css',
 })
-export class ProductDetails {}
+export default class ProductDetails { } // importante usar default para el lazy loading que se implemento en app.routes.ts
