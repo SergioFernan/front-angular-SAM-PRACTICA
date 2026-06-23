@@ -1,0 +1,184 @@
+/* Variables para mantener consistencia en tu diseño */
+:root {
+    --primary-color: #E5C992;
+    /* PRIMARIO (Dorado/Arena) */
+    --secondary-color: #E885CF;
+    /* SECUNDARIO (Rosa/Violeta suave) */
+    --bg-dark: #020617;
+    /* NEUTRAL (Azul casi negro / Slate 950) */
+    --bg-card: #0F172A;
+    /* TERTIARY (Azul muy oscuro / Slate 900) */
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-border: rgba(229, 201, 146, 0.35);
+    /* Borde dorado más nítido */
+}
+
+.login-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    background-image: linear-gradient(180deg, rgba(2, 6, 23, 0.75) 0%, rgba(2, 6, 23, 0.9) 100%),
+        url('/assets/images/login_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Inter', system-ui, sans-serif;
+    padding: 1rem;
+}
+
+.glass-card {
+    width: 100%;
+    max-width: 420px;
+    background: #E5C992;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(229, 201, 146, 0.1);
+    gap: 0.5rem;
+}
+
+.tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.75rem 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: var(--secondary-color);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(229, 201, 146, 0.2);
+}
+
+.title {
+    color: var(--text-main);
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.highlight {
+    color: var(--primary-color);
+    text-shadow: 0 0 15px rgba(229, 201, 146, 0.4);
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--primary-color);
+    /* Cambiado a color dorado para mejor legibilidad y consistencia */
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form-control {
+    background: rgba(2, 6, 23, 0.6);
+    /* Más opaco */
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    /* Cambia a violeta al hacer foco */
+    box-shadow: 0 0 10px rgba(232, 133, 207, 0.3);
+    background: rgba(2, 6, 23, 0.8);
+}
+
+.form-control::placeholder {
+    color: #64748b;
+    /* Gris más claro para que sea legible */
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #94a3b8;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(232, 133, 207, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+.forgot-link {
+    color: var(--secondary-color);
+    /* Cambiado a violeta por defecto */
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: var(--primary-color);
+    /* Cambiado a dorado al pasar el cursor */
+}

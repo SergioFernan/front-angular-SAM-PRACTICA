@@ -1,0 +1,24 @@
+<header class="main-header">
+  <div class="brand-container" routerLink="/home">
+    <img src="assets/images/sam_logo.png" alt="Logo de SAM-Eventos" class="logo">
+    <span class="brand-name">SAM-Eventos</span>
+  </div>
+
+  <nav class="navigation">
+    <ul class="nav-list">
+      <li>
+        <a routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+      </li>
+      <li>
+        <a routerLink="/servicios" routerLinkActive="active-link">Servicios</a>
+      </li>
+      <li>
+        <a routerLink="/contacto" routerLinkActive="active-link">Contacto</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="user-actions">
+    <button class="btn-primary" routerLink="/login">Iniciar Sesión</button>
+  </div>
+</header>

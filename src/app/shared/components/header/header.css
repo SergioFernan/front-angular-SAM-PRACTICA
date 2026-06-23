@@ -1,0 +1,128 @@
+/* Variables de la paleta de colores */
+:host {
+  --primary-color: #E5C992;      /* PRIMARIO (Dorado/Arena) */
+  --secondary-color: #E885CF;    /* SECUNDARIO (Rosa/Violeta suave) - corregido de #E885CF6 */
+  --tertiary-color: #0F172A;     /* TERTIARY (Azul muy oscuro / Slate 900) */
+  --bg-color: #020617;           /* NEUTRAL (Azul casi negro / Slate 950) */
+  --text-main: #f8fafc;          /* Texto principal claro */
+  --text-muted: #94a3b8;         /* Texto secundario/atenuado */
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    /* Separa logo, nav y botones */
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid var(--tertiary-color);
+
+    /* Comportamiento pegajoso al hacer scroll */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.brand-container .logo {
+    height: 40px;
+    width: auto;
+}
+
+.brand-container .brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.navigation .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation .nav-list a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navigation .nav-list a:hover {
+    color: var(--secondary-color);
+}
+
+/* Clase dinámica de Angular cuando la ruta coincide */
+.navigation .nav-list a.active-link {
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+}
+
+/* Subrayado animado para la ruta activa */
+.navigation .nav-list a.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.user-actions .btn-primary {
+    padding: 0.5rem 1.25rem;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.user-actions .btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(232, 133, 207, 0.3);
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.25rem 1rem;
+        align-items: center;
+    }
+
+    .navigation .nav-list {
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .user-actions {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .user-actions .btn-primary {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+}
